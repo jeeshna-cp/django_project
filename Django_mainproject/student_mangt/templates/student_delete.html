@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+{% load static %}
+
+<h4>confirm delete of {{ student.stud_name }}</h4>
+<form action="" method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">yes,delete</button>
+  <a href="{% url 'student_view' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}
